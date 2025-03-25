@@ -156,8 +156,8 @@ class BinarySearchTree:
         else:
           deletedParent._BinaryNode__right = None
         self.__size -= 1
-      elif currentNode._BinaryNode__left is not None and currentNode._BinaryNode__right is not None: #2 child get min, replace deleted node, call delete on get min
-        minNode = self.get_min(self.__root._BinaryNode__right)
+      elif currentNode._BinaryNode__left is not None and currentNode._BinaryNode__right is not None: #2 child
+        minNode = self.get_min(currentNode._BinaryNode__right)
         self.delete(minNode._BinaryNode__value)
         currentNode._BinaryNode__value = minNode._BinaryNode__value
       else: #1 child
